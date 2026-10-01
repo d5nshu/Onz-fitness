@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ONZ FITNESS | Premium Fitness Club</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0a0a;
+    color:#fff;
+    font-family:Inter,sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    padding:25px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:32px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#d6ff00;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-links a{
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d6ff00;
+}
+
+.nav-btn{
+    border:1px solid #d6ff00;
+    padding:11px 20px;
+    color:#d6ff00;
+    font-size:13px;
+    font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+    min-height:780px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.92) 15%,rgba(0,0,0,.65) 48%,rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
+
+.hero-content{
+    max-width:760px;
+    padding-top:80px;
+}
+
+.hero-small{
+    color:#d6ff00;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:clamp(70px,10vw,140px);
+    line-height:.85;
+    text-transform:uppercase;
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.hero h1 span{
+    color:#d6ff00;
+}
+
+.hero p{
+    max-width:570px;
+    color:#c6c6c6;
+    margin:28px 0;
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 28px;
+    background:#d6ff00;
+    color:#050505;
+    font-weight:800;
+    font-size:14px;
+    border:1px solid #d6ff00;
+}
+
+.btn-outline{
+    background:transparent;
+    color:#fff;
+    border-color:#fff;
+}
+
+/* STATS */
+
+.stats{
+    background:#d6ff00;
+    color:#080808;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    padding:28px 20px;
+    text-align:center;
+    border-right:1px solid rgba(0,0,0,.2);
+}
+
+.stat:last-child{
+    border:0;
+}
+
+.stat h3{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:38px;
+    line-height:1;
+}
+
+.stat p{
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* GENERAL */
+
+section{
+    padding:100px 0;
+}
+
+.section-label{
+    color:#d6ff00;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:clamp(48px,6vw,78px);
+    text-transform:uppercase;
+    line-height:.9;
+}
+
+.section-title span{
+    color:#d6ff00;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:550px;
+    background:
+    linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.05)),
+    url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+}
+
+.about-text p{
+    color:#aaa;
+    margin:28px 0;
+}
+
+.check-list{
+    display:grid;
+    gap:15px;
+    margin-top:25px;
+}
+
+.check{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    font-size:14px;
+    font-weight:600;
+}
+
+.check b{
+    color:#d6ff00;
+}
+
+/* PROGRAMS */
+
+.programs{
+    background:#101010;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:55px;
+}
+
+.program{
+    min-height:380px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    background-size:cover;
+    background-position:center;
+}
+
+.program:nth-child(1){
+    background-image:linear-gradient(0deg,#000 5%,transparent 70%),url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=85");
+}
+
+.program:nth-child(2){
+    background-image:linear-gradient(0deg,#000 5%,transparent 70%),url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=85");
+}
+
+.program:nth-child(3){
+    background-image:linear-gradient(0deg,#000 5%,transparent 70%),url("https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=85");
+}
+
+.program-content{
+    padding:28px;
+}
+
+.program-number{
+    color:#d6ff00;
+    font-size:12px;
+    font-weight:800;
+}
+
+.program h3{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:38px;
+    text-transform:uppercase;
+    margin:5px 0;
+}
+
+.program p{
+    color:#bbb;
+    font-size:13px;
+}
+
+/* MEMBERSHIP */
+
+.membership-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:55px;
+}
+
+.plan{
+    border:1px solid #292929;
+    padding:38px 30px;
+    background:#0f0f0f;
+    position:relative;
+}
+
+.plan.featured{
+    border-color:#d6ff00;
+}
+
+.featured-tag{
+    position:absolute;
+    top:0;
+    right:0;
+    background:#d6ff00;
+    color:#000;
+    padding:7px 13px;
+    font-size:10px;
+    font-weight:900;
+}
+
+.plan h3{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:32px;
+    text-transform:uppercase;
+}
+
+.price{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:55px;
+    margin:18px 0;
+}
+
+.price span{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:#888;
+}
+
+.plan ul{
+    list-style:none;
+    color:#aaa;
+    font-size:13px;
+    display:grid;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.plan li::before{
+    content:"— ";
+    color:#d6ff00;
+}
+
+/* TRAINERS */
+
+.trainers{
+    background:#101010;
+}
+
+.trainer-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:55px;
+}
+
+.trainer{
+    background:#161616;
+}
+
+.trainer img{
+    width:100%;
+    height:390px;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(100%);
+}
+
+.trainer-info{
+    padding:22px;
+}
+
+.trainer-info h3{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:30px;
+    text-transform:uppercase;
+}
+
+.trainer-info p{
+    color:#999;
+    font-size:12px;
+}
+
+/* CTA */
+
+.cta{
+    min-height:480px;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
+
+.cta h2{
+    font-family:"Barlow Condensed",sans-serif;
+    text-transform:uppercase;
+    font-size:clamp(55px,8vw,100px);
+    line-height:.85;
+    max-width:800px;
+}
+
+.cta h2 span{
+    color:#d6ff00;
+}
+
+.cta p{
+    color:#ccc;
+    max-width:520px;
+    margin:25px 0;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.contact-info{
+    margin-top:35px;
+    display:grid;
+    gap:22px;
+}
+
+.contact-item small{
+    display:block;
+    color:#d6ff00;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:4px;
+}
+
+.contact-item p{
+    color:#bbb;
+}
+
+.contact-box{
+    border:1px solid #292929;
+    padding:40px;
+    background:#101010;
+}
+
+.contact-box h3{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:38px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.contact-box p{
+    color:#999;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #222;
+    padding:35px 0;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#777;
+    font-size:12px;
+}
+
+.footer-logo{
+    color:#fff;
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:25px;
+    font-weight:900;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-btn{
+        padding:9px 14px;
+    }
+
+    .hero{
+        min-height:700px;
+    }
+
+    .hero h1{
+        font-size:78px;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .about-image{
+        min-height:400px;
+    }
+
+    .program-grid,
+    .membership-grid,
+    .trainer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .program{
+        min-height:430px;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .footer{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:500px){
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:65px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        padding:22px 8px;
+    }
+
+    .stat h3{
+        font-size:30px;
+    }
+
+    .contact-box{
+        padding:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+<div class="container nav">
+
+<a href="#" class="logo">ONZ<span>.</span></a>
+
+<nav class="nav-links">
+<a href="#about">About</a>
+<a href="#programs">Programs</a>
+<a href="#membership">Membership</a>
+<a href="#trainers">Trainers</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a href="#membership" class="nav-btn">JOIN ONZ</a>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-small">PREMIUM FITNESS CLUB</div>
+
+<h1>
+BUILD<br>
+YOUR<br>
+<span>EDGE.</span>
+</h1>
+
+<p>
+ONZ FITNESS is a modern training space built for people
+who take their strength, performance and lifestyle seriously.
+Train with purpose. Move with confidence.
+</p>
+
+<div class="buttons">
+<a href="#membership" class="btn">VIEW MEMBERSHIPS</a>
+<a href="#programs" class="btn btn-outline">EXPLORE PROGRAMS</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<h3>12K+</h3>
+<p>Training Sessions</p>
+</div>
+
+<div class="stat">
+<h3>8+</h3>
+<p>Expert Coaches</p>
+</div>
+
+<div class="stat">
+<h3>6 AM</h3>
+<p>Opening Time</p>
+</div>
+
+<div class="stat">
+<h3>7 DAYS</h3>
+<p>Open Every Week</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+<div class="about-image"></div>
+
+<div class="about-text">
+
+<div class="section-label">01 / About ONZ</div>
+
+<h2 class="section-title">
+MORE THAN<br>
+A <span>GYM.</span>
+</h2>
+
+<p>
+ONZ FITNESS combines modern equipment, experienced coaches
+and a focused training environment to help members build
+real strength and sustainable fitness habits.
+</p>
+
+<div class="check-list">
+
+<div class="check">
+<b>01</b> Premium strength & conditioning equipment
+</div>
+
+<div class="check">
+<b>02</b> Certified personal trainers
+</div>
+
+<div class="check">
+<b>03</b> Dedicated functional training zone
+</div>
+
+<div class="check">
+<b>04</b> Clean, focused and professional environment
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="programs" id="programs">
+
+<div class="container">
+
+<div class="section-label">02 / Training</div>
+
+<h2 class="section-title">
+TRAIN WITH<br>
+<span>PURPOSE.</span>
+</h2>
+
+<div class="program-grid">
+
+<div class="program">
+<div class="program-content">
+<div class="program-number">01</div>
+<h3>Strength</h3>
+<p>Build power, strength and confidence through structured resistance training.</p>
+</div>
+</div>
+
+<div class="program">
+<div class="program-content">
+<div class="program-number">02</div>
+<h3>Functional</h3>
+<p>Improve mobility, conditioning, balance and everyday performance.</p>
+</div>
+</div>
+
+<div class="program">
+<div class="program-content">
+<div class="program-number">03</div>
+<h3>Performance</h3>
+<p>High-intensity training designed for athletes and serious fitness goals.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MEMBERSHIP -->
+
+<section id="membership">
+
+<div class="container">
+
+<div class="section-label">03 / Membership</div>
+
+<h2 class="section-title">
+CHOOSE YOUR<br>
+<span>LEVEL.</span>
+</h2>
+
+<div class="membership-grid">
+
+<div class="plan">
+
+<h3>Essential</h3>
+
+<div class="price">
+₹1,499 <span>/ month</span>
+</div>
+
+<ul>
+<li>Full gym access</li>
+<li>Strength equipment</li>
+<li>Cardio zone access</li>
+<li>Locker facility</li>
+</ul>
+
+<a href="#contact" class="btn">GET STARTED</a>
+
+</div>
+
+
+<div class="plan featured">
+
+<div class="featured-tag">POPULAR</div>
+
+<h3>Performance</h3>
+
+<div class="price">
+₹2,499 <span>/ month</span>
+</div>
+
+<ul>
+<li>Everything in Essential</li>
+<li>Functional training zone</li>
+<li>Monthly fitness assessment</li>
+<li>Training guidance</li>
+</ul>
+
+<a href="#contact" class="btn">GET STARTED</a>
+
+</div>
+
+
+<div class="plan">
+
+<h3>Elite</h3>
+
+<div class="price">
+₹4,999 <span>/ month</span>
+</div>
+
+<ul>
+<li>Everything in Performance</li>
+<li>Personal training sessions</li>
+<li>Custom workout plan</li>
+<li>Nutrition guidance</li>
+</ul>
+
+<a href="#contact" class="btn">GET STARTED</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRAINERS -->
+
+<section class="trainers" id="trainers">
+
+<div class="container">
+
+<div class="section-label">04 / Our Team</div>
+
+<h2 class="section-title">
+MEET THE<br>
+<span>COACHES.</span>
+</h2>
+
+<div class="trainer-grid">
+
+<div class="trainer">
+
+<img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=85">
+
+<div class="trainer-info">
+<h3>Arjun Mehta</h3>
+<p>STRENGTH & CONDITIONING COACH</p>
+</div>
+
+</div>
+
+
+<div class="trainer">
+
+<img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=85">
+
+<div class="trainer-info">
+<h3>Riya Kapoor</h3>
+<p>FUNCTIONAL FITNESS COACH</p>
+</div>
+
+</div>
+
+
+<div class="trainer">
+
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=85">
+
+<div class="trainer-info">
+<h3>Karan Singh</h3>
+<p>PERFORMANCE COACH</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="section-label">START TODAY</div>
+
+<h2>
+YOUR NEXT<br>
+LEVEL <span>STARTS HERE.</span>
+</h2>
+
+<p>
+Stop waiting for motivation. Build discipline,
+train consistently and become stronger every day.
+</p>
+
+<a href="#contact" class="btn">BOOK A FREE VISIT</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container contact-grid">
+
+<div>
+
+<div class="section-label">05 / Contact</div>
+
+<h2 class="section-title">
+COME<br>
+<span>TRAIN.</span>
+</h2>
+
+<div class="contact-info">
+
+<div class="contact-item">
+<small>ADDRESS</small>
+<p>18 Mall Road, Solan, Himachal Pradesh 173212</p>
+</div>
+
+<div class="contact-item">
+<small>PHONE</small>
+<p>+91 98765 43210</p>
+</div>
+
+<div class="contact-item">
+<small>EMAIL</small>
+<p>hello@onzfitness.in</p>
+</div>
+
+<div class="contact-item">
+<small>HOURS</small>
+<p>Monday – Sunday<br>6:00 AM – 10:00 PM</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>Ready to start?</h3>
+
+<p>
+Book a free gym visit and explore the ONZ FITNESS
+facility with our team.
+</p>
+
+<a href="https://wa.me/919876543210?text=Hi%20ONZ%20FITNESS,%20I%20want%20to%20know%20more%20about%20membership." class="btn">
+WHATSAPP US
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer">
+
+<div class="footer-logo">ONZ FITNESS</div>
+
+<div>© 2026 ONZ FITNESS. All Rights Reserved.</div>
+
+<div>Train. Perform. Evolve.</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
